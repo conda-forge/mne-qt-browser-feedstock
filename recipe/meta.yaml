@@ -1,5 +1,5 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6678afb40825236749aed47aa1161bee3c52223e8d2821bf9a8d95f9ca237efd
+  sha256: 68d6d56f1823d054e9b65d10e92e1ad3b9171a72d41b0dff784166a09544a964
 
 build:
   number: 0
   noarch: python
   entry_points:
-    - "mne-qt-browser = mne_qt_browser.__main__:main"
+    - mne-qt-browser = mne_qt_browser.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
