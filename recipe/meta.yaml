@@ -11,23 +11,24 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  noarch: python
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<37]
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python
   run:
     - matplotlib-base
     - mne-base >=0.24
     - numpy
     - pyqt >=5.12
     - pyqtgraph >=0.12.3
-    - python >=3.7
+    - python
     - qtpy
     - scipy
+    - pyopengl  # [osx]
 
 test:
   imports:
