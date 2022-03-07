@@ -1,6 +1,6 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.2.4" %}
-{% set sha256 = "27404a9ff5fdac59aefc5b6a8afc2bfc6dac609e66eb8d53d81d3fd94bc0b4f3" %}
+{% set version = "0.2.5" %}
+{% set sha256 = "ff0dc4b36fa1208398799e0ad851a96a6cdf115fbdd39bb7645dbcb2aaaafd2f" %}
 
 package:
   name: {{ name|lower }}
@@ -28,6 +28,7 @@ requirements:
     - python
     - qtpy
     - scipy
+    - colorspacious
     - pyopengl  # [osx]
 
 test:
