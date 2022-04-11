@@ -28,6 +28,8 @@ requirements:
     - qtpy
     - scipy
     - colorspacious
+    - darkdetect
+    - qdarkstyle
     - pyopengl  # [osx]
     - scooby
 
