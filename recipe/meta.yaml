@@ -1,6 +1,6 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.2.6" %}
-{% set sha256 = "199b7386f3d3649df9aacd0092912c65cb9403d6f70375586953742e39ed84fc" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "90ec669bc41562c156fbdd95f599fd0773887dd3e8a51d4838ececea644a424d" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,6 @@ requirements:
     - matplotlib-base
     - mne-base >=0.24
     - numpy
-    - pyqt >=5.12
     - pyqtgraph >=0.12.3
     - python
     - qtpy
