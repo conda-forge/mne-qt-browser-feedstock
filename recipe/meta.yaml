@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   build:
@@ -23,18 +23,20 @@ requirements:
     - pip
     - python
   run:
-    - matplotlib-base
-    - mne-base >=0.24
-    - numpy
-    - pyqtgraph >=0.12.3
     - python
-    - qtpy
+    - packaging
+    - setuptools >=65
+    - numpy
     - scipy
+    - matplotlib-base
+    - qtpy
+    - scooby
+    - mne-base >=1.0
+    - pyqtgraph >=0.12.3
     - colorspacious
+    - pyopengl  # [osx]
     - darkdetect
     - qdarkstyle
-    - pyopengl  # [osx]
-    - scooby
 
 test:
   imports:
