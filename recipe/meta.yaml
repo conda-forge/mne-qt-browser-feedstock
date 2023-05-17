@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38]
 
@@ -43,6 +43,7 @@ test:
     - mne_qt_browser
   commands:
     - pip check
+    - python -c "import mne_qt_browser; ver = mne_qt_browser.__version__; assert ver == '{{ version }}', ver"
   requires:
     - pip
 
