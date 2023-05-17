@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<38]
+  noarch: python
 
 requirements:
   build:
@@ -21,9 +21,12 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
+    - python >=3.8
+    - setuptools >=45
+    - setuptools_scm >=6.2
+    - git
   run:
-    - python
+    - python >=3.8
     - packaging
     - setuptools >=65
     - numpy
@@ -34,7 +37,7 @@ requirements:
     - mne-base >=1.0
     - pyqtgraph >=0.12.3
     - colorspacious
-    - pyopengl  # [osx]
+    - pyopengl
     - darkdetect
     - qdarkstyle
 
@@ -43,6 +46,7 @@ test:
     - mne_qt_browser
   commands:
     - pip check
+    - python -c "import mne_qt_browser; ver = mne_qt_browser.__version__; assert ver == '{{ version }}', ver"
   requires:
     - pip
 
