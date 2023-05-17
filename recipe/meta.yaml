@@ -13,7 +13,6 @@ source:
 build:
   number: 2
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<38]
   noarch: python
 
 requirements:
@@ -22,9 +21,9 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
+    - python >=3.8
   run:
-    - python
+    - python >=3.8
     - packaging
     - setuptools >=65
     - numpy
