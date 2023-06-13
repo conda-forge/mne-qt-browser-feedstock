@@ -1,6 +1,6 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "d178e894570f8d93cb9439b2524a5c739e425818e90853f23d9e3887643af5aa" %}
+{% set version = "0.5.1" %}
+{% set sha256 = "bcce678f7299a85501de8de3465ad7f6f3c2c167d8702aef3794def270210cc3" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
