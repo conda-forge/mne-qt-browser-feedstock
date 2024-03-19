@@ -1,13 +1,13 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.6.1" %}
-{% set sha256 = "b6a3ed31b257c6a3f7326a07d7318d1d6a63c13e28435c7f8b87058011387061" %}
+{% set version = "0.6.2" %}
+{% set sha256 = "4dc265e3eb5d8577c4da11e8a2bf5aeb7c7e2f73fa54d594a8b2d0e0b04ae5d4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -22,13 +22,10 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools >=45
-    - setuptools_scm >=6.2
-    - git
+    - hatchling
+    - hatch-vcs
   run:
     - python >=3.8
-    - packaging
-    - setuptools >=65
     - numpy
     - scipy
     - matplotlib-base
