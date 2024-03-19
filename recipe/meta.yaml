@@ -22,13 +22,10 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools >=45
-    - setuptools_scm >=6.2
-    - git
+    - hatchling
+    - hatch-vcs
   run:
     - python >=3.8
-    - packaging
-    - setuptools >=65
     - numpy
     - scipy
     - matplotlib-base
