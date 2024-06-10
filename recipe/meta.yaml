@@ -33,7 +33,6 @@ requirements:
     - scooby
     - mne-base >=1.0
     - pyqtgraph >=0.12.3
-    - colorspacious
     - pyopengl
     - darkdetect
     - qdarkstyle
