@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -21,11 +21,11 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - scipy
     - matplotlib-base
@@ -45,6 +45,7 @@ test:
     - python -c "import mne_qt_browser; ver = mne_qt_browser.__version__; assert ver == '{{ version }}', ver"
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/mne-tools/mne-qt-browser
