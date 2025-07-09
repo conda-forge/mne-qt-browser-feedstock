@@ -1,6 +1,6 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.7.1" %}
-{% set sha256 = "3b9db2bd7f0212ed1ffb700ed3dc3a04838e9f0c1dd1a35be220ad31f152ce9f" %}
+{% set version = "0.7.2" %}
+{% set sha256 = "f5a28126a0c8faf72b6f02444593e78c5230804f71364b55cd7ec0baaa246100" %}
 {% set python_min = "3.10" %}
 
 package:
