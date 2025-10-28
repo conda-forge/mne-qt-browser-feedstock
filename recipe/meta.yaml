@@ -1,6 +1,6 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.7.3" %}
-{% set sha256 = "78c275d4c55327fa42987af6fd54aacf02f83a6a13fa02b853a2023476b850e5" %}
+{% set version = "0.7.4" %}
+{% set sha256 = "4ef6daaa1c25b6eda6eb370a571847dc950f05d4a97be4e49452428e8db5bbd2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -32,6 +32,7 @@ requirements:
     - matplotlib-base
     - qtpy
     - scooby
+    - packaging
     - mne-base >=1.0
     - pyqtgraph >=0.12.3
     - pyopengl
