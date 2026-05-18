@@ -1,6 +1,6 @@
 {% set name = "mne-qt-browser" %}
-{% set version = "0.7.4" %}
-{% set sha256 = "4ef6daaa1c25b6eda6eb370a571847dc950f05d4a97be4e49452428e8db5bbd2" %}
+{% set version = "0.7.5" %}
+{% set sha256 = "2a7fcf892f9fa31b8a678f600d946dc3090d2c1576aa3643851f0c97d98dd269" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
@@ -35,7 +35,6 @@ requirements:
     - packaging
     - mne-base >=1.0
     - pyqtgraph >=0.12.3
-    - pyopengl
     - darkdetect
     - qdarkstyle
 
